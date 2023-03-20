@@ -11,7 +11,6 @@ func routes(router httprouter.Router) httprouter.Router {
     return router
 }
 
-
 func indexGet(w http.ResponseWriter, r *http.Request) {
     fmt.Println("Hola")
 }
