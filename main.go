@@ -1,20 +1,16 @@
 package main
 
 import (
-    "fmt"
     "net/http"
     "log"
     "github.com/julienschmidt/httprouter"
-	"github.com/c0mplex1nf/cgame/pkg/deck/infraestructure/routes"
+	deck "github.com/c0mplex1nf/cgame/pkg/deck/infraestructure"
 )
 
 func main() {
-
     log.Print("The Server have been started")
     router := httprouter.New()
-
-    router = deck.infraestructure.rou.routes(router)
-
+	router = deck.Routes(router)
     err := http.ListenAndServe(":3000", router)
     log.Fatal(err)
 }

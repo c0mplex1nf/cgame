@@ -1,4 +1,4 @@
-package deck
+package infra
 
 import (
     "fmt"
@@ -6,7 +6,7 @@ import (
     "github.com/julienschmidt/httprouter"
 )
 
-func routes(router httprouter.Router) httprouter.Router {
+func Routes(router *httprouter.Router) *httprouter.Router {
     router.HandlerFunc("GET", "/", indexGet)
     return router
 }
